@@ -46,7 +46,7 @@ export function MediaLibrary({ onSelect, className }: MediaLibraryProps) {
             console.error(error)
             // toast.error("Failed to load media. Ensure 'media' bucket exists.")
         } else {
-            setFiles(data || [])
+            setFiles((data as any) || [])
         }
         setLoading(false)
     }

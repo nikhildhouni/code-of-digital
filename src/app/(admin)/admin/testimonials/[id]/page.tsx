@@ -30,11 +30,19 @@ const schema = z.object({
     company: z.string().optional(),
     quote: z.string().min(1, 'Quote is required'),
     image_url: z.string().optional(),
-    sort_order: z.coerce.number().default(0),
-    is_active: z.boolean().default(true)
+    sort_order: z.number(),
+    is_active: z.boolean()
 })
 
-type FormData = z.infer<typeof schema>
+type FormData = {
+    name: string;
+    role: string;
+    company?: string;
+    quote: string;
+    image_url?: string;
+    sort_order: number;
+    is_active: boolean;
+}
 
 export default function TestimonialEditorPage() {
     const params = useParams()

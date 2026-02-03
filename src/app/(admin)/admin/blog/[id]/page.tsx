@@ -31,15 +31,24 @@ import { toast } from 'sonner'
 import Link from 'next/link'
 import Image from 'next/image'
 
+const statusEnum = z.enum(['draft', 'published', 'scheduled'])
+type PostStatus = z.infer<typeof statusEnum>
+
 const schema = z.object({
     title: z.string().min(1, 'Title is required'),
     slug: z.string().min(1, 'Slug is required'),
     excerpt: z.string().optional(),
-    status: z.enum(['draft', 'published', 'scheduled']).default('draft'),
+    status: statusEnum,
     featured_image_url: z.string().optional(),
 })
 
-type FormData = z.infer<typeof schema>
+type FormData = {
+    title: string;
+    slug: string;
+    excerpt?: string;
+    status: PostStatus;
+    featured_image_url?: string;
+}
 
 export default function BlogEditorPage() {
     const params = useParams()
