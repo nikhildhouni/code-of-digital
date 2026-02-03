@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Code Of Digital Website
 
-## Getting Started
+A premium, 3D-enabled digital marketing agency website built with Next.js 15, Supabase, and Tailwind CSS.
 
-First, run the development server:
+## Features
+
+- **3D Hero Scene**: Interactive React Three Fiber (Three.js) elements.
+- **Premium Design**: Shadcn/UI, Tailwind CSS, Dark/Light mode (Light default).
+- **Admin Panel**: Full CMS for Pages, Blog, SEO, and Media managed via Supabase.
+- **SEO Optimized**: Next.js Metadata API, Dynamic Sitemaps, JSON-LD.
+- **Authentication**: Secure Admin access via Supabase Auth.
+- **Database**: Supabase Postgres with RLS security.
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4, Shadcn/UI
+- **Animations**: Framer Motion, GSAP (ready)
+- **3D**: @react-three/fiber, @react-three/drei
+- **Backend**: Supabase (Auth, Database, Storage)
+- **Forms**: React Hook Form + Zod
+
+## Setup Instructions
+
+### 1. Prerequisites
+
+- Node.js 18+
+- Supabase Account
+
+### 2. Installation
+
+```bash
+npm install
+```
+
+### 3. Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_(for_scripts_only)
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+### 4. Database Setup (Supabase)
+
+1. Go to your Supabase Project -> **SQL Editor**.
+2. Open `supabase_schema.sql` from this repository.
+3. Copy and Paste the content into the SQL Editor and run it. 
+   - This creates tables: `profiles`, `pages`, `blog_posts`, `seo_meta`, etc.
+   - Sets up RLS Policies (Row Level Security).
+   - Creates the `media` storage bucket (if permission allows) or create it manually in Storage -> New Bucket -> "media" (Public).
+
+### 5. Create Admin User
+
+1. Sign up a new user via the Supabase Dashboard (Authentication -> Users -> Add User) or implemented signup page.
+2. In Supabase **Table Editor**, go to `profiles` table.
+3. Find your user row and change `role` from `viewer` to `admin`.
+4. You can now access `/admin`.
+
+### 6. Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy to Vercel:
 
-## Learn More
+1. Push to GitHub.
+2. Import project in Vercel.
+3. Add Environment Variables in Vercel Project Settings.
+4. Deploy.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/(public)`: Public facing pages (Home, Services, etc.)
+- `src/app/(admin)`: Protected Admin Dashboard.
+- `src/components/3d`: Three.js scenes.
+- `src/components/ui`: Reusable UI components.
+- `src/lib/supabase`: Database clients and middleware.
+# code-of-digital
