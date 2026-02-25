@@ -35,16 +35,16 @@ export function Footer() {
                     <div>
                         <h4 className="text-sm font-bold uppercase tracking-widest mb-6 opacity-40">Visit Us</h4>
                         <address className="not-italic text-lg md:text-xl font-medium max-w-xs leading-relaxed">
-                            7814 Harrison Blvd. Wilmington, <br />
-                            19804 United States
+                            Shahdara, Delhi, 110032 <br />
+
                         </address>
                     </div>
 
                     <div>
                         <h4 className="text-sm font-bold uppercase tracking-widest mb-6 opacity-40">Contact Us</h4>
                         <div className="space-y-2 text-lg md:text-xl font-medium">
-                            <p className="hover:text-primary transition-colors"><a href="mailto:hello@codeofdigital.com">hello@codeofdigital.com</a></p>
-                            <p className="hover:text-primary transition-colors"><a href="tel:+12345678910">+1 (234) 567-8910</a></p>
+                            <p className="hover:text-primary transition-colors"><a href="mailto:codeofdigital5@gmail.com">codeofdigital5@gmail.com</a></p>
+                            <p className="hover:text-primary transition-colors"><a href="tel:+919536503327">+91 95365 03327</a></p>
                         </div>
                     </div>
 

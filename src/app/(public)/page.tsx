@@ -91,7 +91,7 @@ export default function Home() {
                             transition={{ delay: 0.6 }}
                             className="text-right max-w-[200px]"
                         >
-                            <div className="text-xl md:text-2xl font-bold mb-2 tracking-tight">© 2025</div>
+                            <div className="text-xl md:text-2xl font-bold mb-2 tracking-tight">© 2026</div>
                             <p className="text-[10px] md:text-xs font-mono uppercase tracking-widest text-black/40 leading-relaxed font-medium">
                                 Our team uses aesthetic and minimal design to create impact.
                             </p>
@@ -236,7 +236,7 @@ export default function Home() {
                     <h3 className="text-4xl md:text-7xl font-medium leading-tight tracking-tight text-black">
                         "We believe that <span className="text-primary">design</span> is not just about how it looks, but how it <span className="text-primary italic">works</span>."
                     </h3>
-                    <p className="text-xl text-black/60 uppercase tracking-widest font-mono">Code Of Digital • Est 2025</p>
+                    <p className="text-xl text-black/60 uppercase tracking-widest font-mono">Code Of Digital • Est 2022</p>
                 </div>
             </section>
 

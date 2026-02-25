@@ -93,7 +93,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h3 className="font-bold uppercase tracking-widest text-sm mb-1">Email</h3>
-                                <p className="text-lg">hello@codeofdigital.com</p>
+                                <p className="text-lg">codeofdigital5@gmail.com</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
@@ -102,7 +102,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h3 className="font-bold uppercase tracking-widest text-sm mb-1">Phone</h3>
-                                <p className="text-lg">+1 (555) 000-0000</p>
+                                <p className="text-lg">+91 95365 03327</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
@@ -111,7 +111,8 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h3 className="font-bold uppercase tracking-widest text-sm mb-1">Office</h3>
-                                <p className="text-lg">123 Digital Ave, New York, NY</p>
+                                <p className="text-lg">Shahdara, Delhi</p>
+                                <p className="text-sm text-muted-foreground mt-1">CEO: Deepak Kumar</p>
                             </div>
                         </div>
                     </div>
